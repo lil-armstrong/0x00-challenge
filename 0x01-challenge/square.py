@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ square class ,odule """
 class square():
-    
+    """ square class """
     width = 0
     height = 0
 
