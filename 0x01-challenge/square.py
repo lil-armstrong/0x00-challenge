@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-""" square class ,odule """
-class Square():
+""" square class module """
+class Square:
     """ square class """
     width = 0
     height = 0
     
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         """ initialize a square instance """
         self.width = kwargs.get('width', 0)
         self.height = kwargs.get('height', 0)
-
+    @property
     def area(self):
         """ Area of the square """
         return self.width * self.width
-
+    @property
     def perimeter(self):
         """ calculate perimeter of square """
         return (self.width * 2) + (self.height * 2)
@@ -25,5 +25,5 @@ class Square():
 if __name__ == "__main__":
     s = Square(width=12, height=9)
     print(s)
-    print(s.area())
-    print(s.perimeter())
+    print(s.area)
+    print(s.perimeter)
