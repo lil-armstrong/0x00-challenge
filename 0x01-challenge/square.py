@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" Square module """
 class square():
     
     width = 0
@@ -7,6 +7,7 @@ class square():
 
     
     def __init__(self, *args, **kwargs):
+        """ Square instance initializer """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -15,9 +16,11 @@ class square():
         return self.width * self.height
 
     def PermiterOfMySquare(self):
+        """ Get the perineter of the square """
         return 2*(self.width + self.height)
 
     def __str__(self):
+        """ print friendly instance string"""
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
