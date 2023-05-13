@@ -18,7 +18,7 @@ class square():
         return 2*(self.width + self.height)
 
     def __str__(self):
-        return "Square {}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
 
