@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Square module """
+""" square class ,odule """
 class square():
     
     width = 0
@@ -7,25 +7,25 @@ class square():
 
     
     def __init__(self, *args, **kwargs):
-        """ Square instance initializer """
+        """ initialize a square instance """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.height
+        return self.width * self.width
 
     def PermiterOfMySquare(self):
-        """ Get the perineter of the square """
-        return 2*(self.width + self.height)
+        """ calculate perimeter of square """
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ print friendly instance string"""
+        """ string represemtation square instance """
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
 
-    s = square(width=12, height=12)
+    s = square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
