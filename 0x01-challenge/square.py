@@ -1,9 +1,19 @@
 #!/usr/bin/env python3
+''' Squate module '''
+
 class Square:
+    ''' Square class '''
+    width = 0
+    height = 0
     
-    def __init__(self, **kwargs):
-        self.width = kwargs.get('width', 0)
-        self.height = kwargs.get('height', 0)
+    def __init__(self, *args, **kwargs):
+        ''' Square instance initialization'''
+        if len(kwargs) > 0:
+            for key, value in kwargs.items(): 
+                 setattr(self, key, value)
+        else:
+            self.width = args[0]
+            self.height = args[1]
     
     @property
     def area(self):
@@ -13,10 +23,11 @@ class Square:
     @property
     def perimeter(self):
         """Perimeter of the square"""
-        return (self.width * 2) + (self.height * 2)
+        return 2 * (self.width + self.height)
     
     def __str__(self):
-        return f"{self.width}/{self.height}"
+        ''' Syring repr of square'''
+        return f"Square({self.width}, {self.height})"
     
 if __name__ == "__main__":
     s = Square(width=12, height=9)
